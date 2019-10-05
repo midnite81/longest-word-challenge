@@ -1,0 +1,29 @@
+{
+  "name": "longest-word",
+  "version": "1.0.0",
+  "description": "A small node js project to determine what is the longest seven letter word which will display on a seven segment display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Simon Rogers",
+    "email": "webdev@centralblue.co.uk",
+    "url": "https://centralblue.co.uk"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "nodemon": "^1.19.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "open": "^6.4.0"
+  }
+}

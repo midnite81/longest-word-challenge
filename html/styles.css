@@ -1,0 +1,17 @@
+@font-face {
+    font-family: '7segment';
+    src: url('7segment.ttf');
+}
+
+.segment7 {
+    font-family: '7segment', serif;
+    font-size: 240px;
+    text-align: center;
+    margin: auto;
+}
+
+body {
+    font-family: Arial, serif;
+    margin: 48px;
+    background: #FFF;
+}
