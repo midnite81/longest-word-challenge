@@ -3,13 +3,13 @@ import open = require("open");
 import server from "./server";
 
 const words: string = fs.readFileSync("./data/words.txt").toString();
-const arrayOfWords = words.split("\r\n");
+const arrayOfWords: string[] = words.split("\r\n");
+
+console.info(`The total number of words in the dictionary is ${arrayOfWords.length}`);
 
 const badLetters: RegExp = /[gkmqvwxyz]/;
 let longestAcceptableWord: string = "";
 const sevenLetterWords: string[] = [];
-
-console.info(`Word Count: ${words.length}`);
 
 for (const word of arrayOfWords) {
     if (word.length < longestAcceptableWord.length || word.length > 7 || word.match(badLetters)) {
@@ -22,7 +22,9 @@ for (const word of arrayOfWords) {
     longestAcceptableWord = word;
 }
 
-console.info(`Here are ${sevenLetterWords.length} longest words`);
+console.info(`The total number of seven character words is ${sevenLetterWords.length}`);
+console.info(`The word which was accepted was ${longestAcceptableWord}`);
+
 for (const word of sevenLetterWords) {
     console.info(word);
 }
@@ -30,8 +32,8 @@ for (const word of sevenLetterWords) {
 const randomIndex: number = Math.floor(Math.random() * sevenLetterWords.length);
 const randomWord: string = sevenLetterWords[randomIndex];
 
-console.info(`The random longest word selected is ${ randomWord }`);
+console.info(`The random selected word is ${randomWord}`);
 
-const httpPort = 9084;
+const httpPort: number = 8080;
 server.startServer(httpPort);
 open(`http://127.0.0.1:${httpPort}?word=${randomWord}`);
