@@ -30,3 +30,11 @@ an array with all the acceptable words. And then we will create a server and out
 yarn
 yarn run build:live
 ```
+
+alternatively if you don't want to rely on nodemon then you can compile the script first and run with node directly.
+
+```
+yarn
+yarn run build
+node lib/index.js
+```
