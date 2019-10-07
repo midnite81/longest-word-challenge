@@ -41,6 +41,5 @@ alternatively if you don't want to rely on nodemon then you can compile the scri
 
 ```
 yarn
-yarn run build
-node lib/index.js
+yarn run go
 ```
