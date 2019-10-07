@@ -26,6 +26,12 @@ an array with all the acceptable words. And then we will create a server and out
 
 # Install
 
+First clone the package
+```
+git clone git@github.com:midnite81/longest-word-challenge.git
+```
+
+Then run
 ```
 yarn
 yarn run build:live

@@ -3,7 +3,7 @@ import open = require("open");
 import server from "./server";
 
 const words: string = fs.readFileSync("./data/words.txt").toString();
-const arrayOfWords: string[] = words.split("\r\n");
+const arrayOfWords: string[] = words.split("\n");
 
 console.info(`The total number of words in the dictionary is ${arrayOfWords.length}`);
 
@@ -11,7 +11,10 @@ const badLetters: RegExp = /[gkmqvwxyz]/;
 let longestAcceptableWord: string = "";
 const sevenLetterWords: string[] = [];
 
-for (const word of arrayOfWords) {
+for (let word of arrayOfWords) {
+    // We will remove the first part of the carriage return if it exists
+    word = word.replace("\r", "");
+
     if (word.length < longestAcceptableWord.length || word.length > 7 || word.match(badLetters)) {
         continue;
     }
