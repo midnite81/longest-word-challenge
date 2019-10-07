@@ -6,6 +6,8 @@ the longest word you can write with a seven segment display.
 Take a look at his [Youtube Challenge Video](https://www.youtube.com/watch?v=zp4BMR88260). He disallows the following 
 characters: gkmqvwxz. We too will exclude those characters. 
 
+To view my tutorial on how I created this codebase please [watch it](https://www.youtube.com/watch?v=bIjTRgdvIew) on Youtube.
+
 # Useful links
 
 - Public domain list of English words: https://github.com/dwyl/english-words
